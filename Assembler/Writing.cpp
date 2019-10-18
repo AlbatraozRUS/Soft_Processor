@@ -8,7 +8,7 @@ void Writing (char *bytecode, int size)
     assert(Writefile != nullptr);
 
     for (int PC = 0; PC < size; PC++) {
-        fprintf(Writefile, "%d ", bytecode[PC]);
+        fprintf(Writefile, "%02x ", bytecode[PC]);
     }
 
     fclose(Writefile);
